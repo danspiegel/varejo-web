@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+ "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+ "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+ <constant name="struts.enable.DynamicMethodInvocation"
+ value="false" />
+ <constant name="struts.devMode" value="false" />
+ <constant name="struts.custom.i18n.resources" value="messages" />
+
+ <package name="default" namespace="/" extends="json-default">
+
+	 <!-- ########## VENDEDOR INÍCIO ########## -->
+	  
+	 <action name="vendedorValidar" class="br.com.varejo.action.VendedorAction" method="validarDados">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <action name="vendedorExibir" class="br.com.varejo.action.VendedorAction" method="exibir">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <action name="vendedorIncluir" class="br.com.varejo.action.VendedorAction" method="incluir">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <action name="vendedorAtualizar" class="br.com.varejo.action.VendedorAction" method="atualizar">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <action name="vendedorLogout" class="br.com.varejo.action.VendedorAction" method="logout">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <!-- ########## VENDEDOR FIM ########## -->
+	 
+	 <!-- ########## CLIENTE INÍCIO ########## -->
+	 
+	 <action name="clienteListar" class="br.com.varejo.action.ClienteAction" method="listar">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <action name="clienteIncluir" class="br.com.varejo.action.ClienteAction" method="incluir">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <action name="clienteAtualizar" class="br.com.varejo.action.ClienteAction" method="atualizar">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <action name="clienteExcluir" class="br.com.varejo.action.ClienteAction" method="excluir">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <!-- ########## CLIENTE FIM ########## -->
+	 
+	 <!-- ########## ESTOQUE INÍCIO ########## -->
+	  
+	 <action name="estoqueListar" class="br.com.varejo.action.EstoqueAction" method="listar">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <action name="estoqueIncluir" class="br.com.varejo.action.EstoqueAction" method="incluir">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <action name="estoqueAtualizar" class="br.com.varejo.action.EstoqueAction" method="atualizar">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <action name="estoqueExcluir" class="br.com.varejo.action.EstoqueAction" method="excluir">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <!-- ########## ESTOQUE FIM ########## -->
+	 
+	 <!-- ########## PRODUTO INÍCIO ########## -->
+	 
+	 <action name="produtoListar" class="br.com.varejo.action.ProdutoAction" method="listar">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <action name="produtoIncluir" class="br.com.varejo.action.ProdutoAction" method="incluir">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <action name="produtoAtualizar" class="br.com.varejo.action.ProdutoAction" method="atualizar">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <action name="produtoExcluir" class="br.com.varejo.action.ProdutoAction" method="excluir">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <!-- ########## PRODUTO FIM ########## -->
+	 
+	 <!-- ########## VENDA INÍCIO ########## -->
+	 
+	 <action name="vendaListar" class="br.com.varejo.action.VendaAction" method="listar">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <action name="vendaIncluir" class="br.com.varejo.action.VendaAction" method="incluir">
+		<result name="retornoAjax" type="json">
+	 		<param name="root">retornoAjax</param>
+	 	</result>
+	 </action>
+	 
+	 <!-- ########## VENDA FIM ########## -->
+	 
+ </package>
+</struts>
